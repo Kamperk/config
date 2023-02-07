@@ -1,0 +1,17 @@
+server:
+  port: 8070
+
+eurika:
+  instanse:
+    hostname: localhost
+  client:
+#    Запрещает ServiceConfig регистрироваться в службе Eurika
+    registerWithEureka: false
+#      Запрещает кешировать информацию из реестра
+      fetchRegistry: false
+      serviceUrl:
+        defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+  server:
+#    Начальное время ожидания когда сервер начнет принимать запросы
+    waitTimeInMsWhenSyncEmpty: 5
