@@ -1,5 +1,6 @@
 server:
   port: 8072
+
 eureka:
   instance:
     preferIpAddress: true
@@ -16,3 +17,9 @@ spring:
         locator:
           enabled: true
 #            lowerCaseServiceId: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
